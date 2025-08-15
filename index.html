@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spirit Animal Quiz Online - Free Personality Test | Spiritanimalquizonline.com</title>
+    <meta name="description" content="Take the best spirit animal quiz online! Discover your spirit animal through our free personality test. Find out which animal spirit guides match your soul - 16 animals, instant results!">
+    <meta name="keywords" content="spirit animal quiz, spirit animal test, spirit animal quiz online, personality quiz, spirit guide quiz, what is my spirit animal, free spirit animal quiz">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Spirit Animal Quiz Online - Free Personality Test">
+    <meta property="og:description" content="Take the best spirit animal quiz online! Discover your spirit animal through our free personality test with instant results.">
+    <meta property="og:url" content="https://spiritanimalquizonline.com">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Spirit Animal Quiz Online - Free Personality Test">
+    <meta name="twitter:description" content="Take the best spirit animal quiz online! Discover your spirit animal through our free personality test with instant results.">
+    <link rel="canonical" href="https://spiritanimalquizonline.com">
+    
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Spirit Animal Quiz Online",
+        "url": "https://spiritanimalquizonline.com",
+        "description": "Take the best spirit animal quiz online! Free personality test to discover your spirit animal with instant results.",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://spiritanimalquizonline.com/?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Quiz",
+        "name": "Spirit Animal Quiz Online",
+        "description": "Comprehensive spirit animal personality quiz with 16 possible results. Discover which spirit animal matches your personality through 12 carefully crafted questions.",
+        "url": "https://spiritanimalquizonline.com",
+        "educationalLevel": "General audience",
+        "timeRequired": "PT5M",
+        "numberOfQuestions": 12,
+        "about": {
+            "@type": "Thing",
+            "name": "Spirit Animals",
+            "description": "Personality archetypes based on animal characteristics"
+        },
+        "author": {
+            "@type": "Organization",
+            "name": "Spirit Animal Quiz Online",
+            "url": "https://spiritanimalquizonline.com"
+        }
+    }
+    </script>
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+        
+        // Track quiz events for better analytics
+        function trackQuizEvent(action, label) {
+            gtag('event', action, {
+                event_category: 'Spirit Animal Quiz',
+                event_label: label
+            });
+        }
+    </script>
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-icon">🦌</span>
+                <span class="logo-text">Spirit Animal Quiz Online</span>
+            </div>
+            <div class="nav-links">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#animals" class="nav-link">Animals</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Landing Page -->
+        <section id="landing-page" class="page active">
+            <!-- Hero Section -->
+            <div class="hero">
+                <div class="hero-background">
+                    <div class="floating-particles"></div>
+                </div>
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        Take the Best
+                        <span class="gradient-text">Spirit Animal Quiz Online</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Free spirit animal quiz with instant results! Discover which spirit animal matches your personality through our comprehensive online test
+                    </p>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">250K+</span>
+                            <span class="stat-label">Spirit Animal Quiz Takers</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">16</span>
+                            <span class="stat-label">Spirit Animals Available</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Free Online Quiz</span>
+                        </div>
+                    </div>
+                    <button id="start-quiz-btn" class="cta-button">
+                        <span class="button-text">Take Spirit Animal Quiz Now</span>
+                        <span class="button-icon">✨</span>
+                    </button>
+                </div>
+                
+                <!-- Animal Carousel -->
+                <div class="animal-carousel">
+                    <div class="animal-card" data-animal="eagle">
+                        <div class="animal-emoji">🦅</div>
+                        <div class="animal-name">Eagle</div>
+                    </div>
+                    <div class="animal-card" data-animal="wolf">
+                        <div class="animal-emoji">🐺</div>
+                        <div class="animal-name">Wolf</div>
+                    </div>
+                    <div class="animal-card" data-animal="butterfly">
+                        <div class="animal-emoji">🦋</div>
+                        <div class="animal-name">Butterfly</div>
+                    </div>
+                    <div class="animal-card" data-animal="bear">
+                        <div class="animal-emoji">🐻</div>
+                        <div class="animal-name">Bear</div>
+                    </div>
+                    <div class="animal-card" data-animal="dolphin">
+                        <div class="animal-emoji">🐬</div>
+                        <div class="animal-name">Dolphin</div>
+                    </div>
+                    <div class="animal-card" data-animal="owl">
+                        <div class="animal-emoji">🦉</div>
+                        <div class="animal-name">Owl</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- How It Works Section -->
+            <section class="how-it-works">
+                <div class="container">
+                    <h2 class="section-title">How Our Spirit Animal Quiz Works</h2>
+                    <div class="steps-grid">
+                        <div class="step">
+                            <div class="step-icon">❓</div>
+                            <h3>Answer Spirit Animal Quiz Questions</h3>
+                            <p>Complete our comprehensive online spirit animal quiz with 12 personality-based questions</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-icon">🧠</div>
+                            <h3>Instant Spirit Animal Results</h3>
+                            <p>Our advanced algorithm instantly analyzes your quiz responses to reveal your spirit animal match</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-icon">🎯</div>
+                            <h3>Discover Your Spirit Animal</h3>
+                            <p>Get detailed insights about your spirit animal and share your quiz results with friends</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Featured Animals Preview -->
+            <section class="featured-animals">
+                <div class="container">
+                    <h2 class="section-title">16 Spirit Animals in Our Online Quiz</h2>
+                    <div class="animals-preview-grid">
+                        <div class="animal-preview" data-type="leader">
+                            <div class="preview-icon">👑</div>
+                            <h3>Leadership</h3>
+                            <p>Eagle, Lion, Tiger</p>
+                            <div class="preview-traits">
+                                <span class="trait">Confident</span>
+                                <span class="trait">Visionary</span>
+                                <span class="trait">Inspiring</span>
+                            </div>
+                        </div>
+                        <div class="animal-preview" data-type="wisdom">
+                            <div class="preview-icon">🧙‍♀️</div>
+                            <h3>Wisdom</h3>
+                            <p>Owl, Wolf, Elephant</p>
+                            <div class="preview-traits">
+                                <span class="trait">Intuitive</span>
+                                <span class="trait">Strategic</span>
+                                <span class="trait">Deep</span>
+                            </div>
+                        </div>
+                        <div class="animal-preview" data-type="freedom">
+                            <div class="preview-icon">🕊️</div>
+                            <h3>Freedom</h3>
+                            <p>Horse, Butterfly, Dolphin</p>
+                            <div class="preview-traits">
+                                <span class="trait">Independent</span>
+                                <span class="trait">Creative</span>
+                                <span class="trait">Adaptable</span>
+                            </div>
+                        </div>
+                        <div class="animal-preview" data-type="strength">
+                            <div class="preview-icon">💪</div>
+                            <h3>Strength</h3>
+                            <p>Bear, Rhino, Tiger</p>
+                            <div class="preview-traits">
+                                <span class="trait">Protective</span>
+                                <span class="trait">Determined</span>
+                                <span class="trait">Reliable</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cta-section">
+                        <p class="cta-text">Ready to take the spirit animal quiz online?</p>
+                        <button id="start-quiz-btn-2" class="cta-button secondary">
+                            <span class="button-text">Start Spirit Animal Quiz</span>
+                            <span class="button-icon">🔮</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- Quiz Page (Initially Hidden) -->
+        <section id="quiz-page" class="page">
+            <div class="quiz-container">
+                <div class="quiz-header">
+                    <div class="progress-section">
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progress-fill"></div>
+                        </div>
+                        <span class="progress-text" id="progress-text">Question 1 of 12</span>
+                    </div>
+                    <button class="quiz-exit" id="quiz-exit">✕</button>
+                </div>
+                
+                <div class="question-container">
+                    <h2 class="question-title" id="question-title">Loading...</h2>
+                    <div class="answers-grid" id="answers-grid">
+                        <!-- Answers will be dynamically generated -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Result Page (Initially Hidden) -->
+        <section id="result-page" class="page">
+            <div class="result-container">
+                <div class="result-content" id="result-content">
+                    <!-- Results will be dynamically generated -->
+                </div>
+            </div>
+        </section>
+
+        <!-- About Page -->
+        <section id="about-page" class="page">
+            <div class="page-container">
+                <div class="page-header">
+                    <h1>About Our Spirit Animal Quiz Online</h1>
+                    <p>Learn about the most accurate spirit animal quiz on Spiritanimalquizonline.com</p>
+                </div>
+                
+                <div class="content-sections">
+                    <div class="content-section">
+                        <h2>🦌 Our Spirit Animal Quiz Mission</h2>
+                        <p>Spiritanimalquizonline.com was created to provide the most comprehensive spirit animal quiz online. Our free personality test helps people discover their spirit animal through carefully designed questions that reveal which animal spirit matches your true personality and life path.</p>
+                    </div>
+                    
+                    <div class="content-section">
+                        <h2>🧠 The Science Behind Our Spirit Animal Quiz</h2>
+                        <p>Our online spirit animal quiz is based on established personality psychology principles, including the Big Five personality traits and Jungian archetypes. We've carefully crafted spirit animal quiz questions that reveal your:</p>
+                        <ul>
+                            <li>Leadership style and decision-making patterns</li>
+                            <li>Social preferences and communication style</li>
+                            <li>Values and what motivates you most</li>
+                            <li>How you handle challenges and conflicts</li>
+                            <li>Your natural strengths and growth areas</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="content-section">
+                        <h2>🌍 Cultural Respect</h2>
+                        <p>We deeply respect the spiritual traditions that honor animal spirits. Our approach is designed for modern self-reflection and personal growth, drawing inspiration from various cultures while being accessible to people of all backgrounds.</p>
+                    </div>
+                    
+                    <div class="content-section">
+                        <h2>✨ What Makes Us Special</h2>
+                        <div class="features-grid">
+                            <div class="feature-card">
+                                <div class="feature-icon">🎯</div>
+                                <h3>Accurate Results</h3>
+                                <p>12 carefully crafted questions with weighted scoring algorithm</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">📊</div>
+                                <h3>Detailed Analysis</h3>
+                                <p>Comprehensive personality insights and growth guidance</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">🔒</div>
+                                <h3>Privacy First</h3>
+                                <p>No personal data collected, results stored locally</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">🌟</div>
+                                <h3>Beautiful Design</h3>
+                                <p>Immersive experience with modern, mystical aesthetics</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cta-section">
+                    <button onclick="startQuiz()" class="cta-button">
+                        <span>Take Spirit Animal Quiz Online</span>
+                        <span>🦅</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Animals Page -->
+        <section id="animals-page" class="page">
+            <div class="page-container">
+                <div class="page-header">
+                    <h1>Complete Spirit Animal Quiz Guide</h1>
+                    <p>Explore all 16 spirit animals featured in our online quiz and discover their unique characteristics</p>
+                </div>
+                
+                <div class="animals-filter">
+                    <button class="filter-btn active" data-type="all">All Animals</button>
+                    <button class="filter-btn" data-type="leadership">Leadership</button>
+                    <button class="filter-btn" data-type="wisdom">Wisdom</button>
+                    <button class="filter-btn" data-type="freedom">Freedom</button>
+                    <button class="filter-btn" data-type="strength">Strength</button>
+                </div>
+                
+                <div class="animals-grid" id="animals-grid">
+                    <!-- Animals will be dynamically generated -->
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Page -->
+        <section id="faq-page" class="page">
+            <div class="page-container">
+                <div class="page-header">
+                    <h1>Spirit Animal Quiz FAQ</h1>
+                    <p>Everything you need to know about taking our spirit animal quiz online</p>
+                </div>
+                
+                <div class="faq-sections">
+                    <div class="faq-category">
+                        <h2>🎯 About the Quiz</h2>
+                        <div class="faq-items">
+                            <div class="faq-item">
+                                <div class="faq-question">How accurate is your spirit animal quiz online?</div>
+                                <div class="faq-answer">Our spirit animal quiz is the most comprehensive online test available, designed for both entertainment and self-reflection. While based on psychological principles, it's not a scientific assessment. Results should be interpreted as meaningful insights into your personality and spiritual connection.</div>
+                            </div>
+                            <div class="faq-item">
+                                <div class="faq-question">How long does the spirit animal quiz take?</div>
+                                <div class="faq-answer">Our online spirit animal quiz typically takes 3-5 minutes to complete. There are 12 thoughtful questions designed to capture different aspects of your personality and reveal your true spirit animal match.</div>
+                            </div>
+                            <div class="faq-item">
+                                <div class="faq-question">Can I retake the spirit animal quiz?</div>
+                                <div class="faq-answer">Absolutely! You can take our spirit animal quiz online as many times as you'd like. Your spirit animal results might change based on your mood, recent experiences, or personal growth journey.</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-category">
+                        <h2>🦌 About Spirit Animals</h2>
+                        <div class="faq-items">
+                            <div class="faq-item">
+                                <div class="faq-question">What is a spirit animal?</div>
+                                <div class="faq-answer">A spirit animal is a symbolic representation of traits, characteristics, and qualities that resonate with your personality. It's a way to understand yourself through animal archetypes and natural wisdom.</div>
+                            </div>
+                            <div class="faq-item">
+                                <div class="faq-question">Why these 16 animals specifically?</div>
+                                <div class="faq-answer">We selected 16 animals that represent diverse personality archetypes across four main categories: Leadership, Wisdom, Freedom, and Strength. Each animal embodies distinct traits that cover the spectrum of human personality.</div>
+                            </div>
+                            <div class="faq-item">
+                                <div class="faq-question">Can my spirit animal change over time?</div>
+                                <div class="faq-answer">Yes! As you grow and evolve, different animal spirits may resonate more strongly with you. Life experiences, personal development, and changing circumstances can all influence your results.</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-category">
+                        <h2>🔒 Privacy & Data</h2>
+                        <div class="faq-items">
+                            <div class="faq-item">
+                                <div class="faq-question">Do you collect my personal information?</div>
+                                <div class="faq-answer">No, we don't collect personal information from quiz takers. Your responses and results are stored locally in your browser and never transmitted to our servers.</div>
+                            </div>
+                            <div class="faq-item">
+                                <div class="faq-question">Can I share my results?</div>
+                                <div class="faq-answer">Yes! We provide easy sharing options for social media. You can share your spirit animal result with friends while maintaining your privacy.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Page -->
+        <section id="contact-page" class="page">
+            <div class="page-container">
+                <div class="page-header">
+                    <h1>Contact Spirit Animal Quiz Online</h1>
+                    <p>Questions about our spirit animal quiz? We'd love to hear from you!</p>
+                </div>
+                
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h2>Get in Touch About Our Spirit Animal Quiz</h2>
+                        <p>Have questions about our online spirit animal quiz, feedback, or suggestions? We're here to help make your spirit animal discovery journey even better.</p>
+                        
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <div class="contact-icon">📧</div>
+                                <div class="contact-details">
+                                    <h3>Email</h3>
+                                    <p>hello@spiritanimalquizonline.com</p>
+                                </div>
+                            </div>
+                            <div class="contact-method">
+                                <div class="contact-icon">💬</div>
+                                <div class="contact-details">
+                                    <h3>Quiz Feedback</h3>
+                                    <p>feedback@spiritanimalquizonline.com</p>
+                                </div>
+                            </div>
+                            <div class="contact-method">
+                                <div class="contact-icon">🐛</div>
+                                <div class="contact-details">
+                                    <h3>Quiz Support</h3>
+                                    <p>support@spiritanimalquizonline.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form">
+                        <h2>Send us a Message</h2>
+                        <form id="contact-form">
+                            <div class="form-group">
+                                <label for="contact-name">Name</label>
+                                <input type="text" id="contact-name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-email">Email</label>
+                                <input type="email" id="contact-email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-subject">Subject</label>
+                                <select id="contact-subject" required>
+                                    <option value="">Choose a topic</option>
+                                    <option value="feedback">General Feedback</option>
+                                    <option value="bug">Bug Report</option>
+                                    <option value="suggestion">Feature Suggestion</option>
+                                    <option value="question">Question</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-message">Message</label>
+                                <textarea id="contact-message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">
+                                <span>Send Message</span>
+                                <span>📨</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Page -->
+        <section id="blog-page" class="page">
+            <div class="page-container">
+                <div class="page-header">
+                    <h1>Spirit Animal Quiz Blog</h1>
+                    <p>Insights, stories, and wisdom about spirit animal quizzes and personality discovery</p>
+                </div>
+                
+                <div class="blog-content">
+                    <div class="blog-post featured">
+                        <div class="post-header">
+                            <span class="post-category">Featured</span>
+                            <h2>Understanding Your Spirit Animal Quiz Results</h2>
+                            <div class="post-meta">
+                                <span class="post-date">December 15, 2024</span>
+                                <span class="post-author">Spirit Guide Team</span>
+                            </div>
+                        </div>
+                        <div class="post-content">
+                            <p>Taking our spirit animal quiz online is just the beginning of a deeper journey of self-understanding. Once you've discovered which spirit animal matches your personality through our quiz, the next step is learning how to integrate that wisdom into your daily life.</p>
+                            <p>Each spirit animal result from our quiz carries unique lessons and energies that can guide you through different phases of life. Whether your spirit animal quiz reveals you're an Eagle soaring towards new heights or a Bear protecting what matters most, understanding your results can provide profound insights for personal growth.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="blog-posts-grid">
+                        <article class="blog-post">
+                            <div class="post-header">
+                                <span class="post-category">Wisdom</span>
+                                <h3>Ancient Wisdom Behind Spirit Animal Quizzes</h3>
+                                <div class="post-meta">
+                                    <span class="post-date">December 10, 2024</span>
+                                </div>
+                            </div>
+                            <div class="post-excerpt">
+                                <p>Explore how ancient cultures viewed animal spirits and how modern spirit animal quizzes help us connect with their timeless wisdom.</p>
+                            </div>
+                        </article>
+                        
+                        <article class="blog-post">
+                            <div class="post-header">
+                                <span class="post-category">Psychology</span>
+                                <h3>The Psychology Behind Spirit Animal Quiz Results</h3>
+                                <div class="post-meta">
+                                    <span class="post-date">December 5, 2024</span>
+                                </div>
+                            </div>
+                            <div class="post-excerpt">
+                                <p>Discover the psychological research behind our spirit animal quiz and how animal archetypes help understand personality traits.</p>
+                            </div>
+                        </article>
+                        
+                        <article class="blog-post">
+                            <div class="post-header">
+                                <span class="post-category">Growth</span>
+                                <h3>Connecting with Your Spirit Animal Quiz Results</h3>
+                                <div class="post-meta">
+                                    <span class="post-date">November 28, 2024</span>
+                                </div>
+                            </div>
+                            <div class="post-excerpt">
+                                <p>Learn how to deepen your connection with the spirit animal revealed by our quiz through meditation and spiritual practices.</p>
+                            </div>
+                        </article>
+                        
+                        <article class="blog-post">
+                            <div class="post-header">
+                                <span class="post-category">Community</span>
+                                <h3>Real Spirit Animal Quiz Success Stories</h3>
+                                <div class="post-meta">
+                                    <span class="post-date">November 20, 2024</span>
+                                </div>
+                            </div>
+                            <div class="post-excerpt">
+                                <p>Read inspiring stories from our community about how taking our spirit animal quiz online changed their perspective on life and self-understanding.</p>
+                            </div>
+                        </article>
+                    </div>
+                    
+                    <div class="coming-soon">
+                        <h3>More Content Coming Soon!</h3>
+                        <p>We're working on bringing you more insights, stories, and wisdom about spirit animals. Subscribe to our newsletter to be the first to know when new content is available.</p>
+                        <button onclick="showPage('landing')" class="cta-button">
+                            <span>Subscribe to Newsletter</span>
+                            <span>📧</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <span class="logo-icon">🦌</span>
+                        <span class="logo-text">Spirit Animal Quiz Online</span>
+                    </div>
+                    <p class="footer-description">
+                        Take the best spirit animal quiz online at Spiritanimalquizonline.com. 
+                        Free personality test to discover your spirit animal with instant results.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook">📘</a>
+                        <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+                        <a href="#" class="social-link" aria-label="Instagram">📷</a>
+                        <a href="#" class="social-link" aria-label="TikTok">🎵</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Explore</h4>
+                    <ul class="footer-links">
+                        <li><a href="#quiz">Spirit Animal Quiz</a></li>
+                        <li><a href="#animals">All Spirit Animals</a></li>
+                        <li><a href="#about">Quiz Guide</a></li>
+                        <li><a href="#blog">Spirit Animal Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Spirit Animals</h4>
+                    <ul class="footer-links">
+                        <li><a href="#leadership">Leadership Types</a></li>
+                        <li><a href="#wisdom">Wisdom Types</a></li>
+                        <li><a href="#freedom">Freedom Types</a></li>
+                        <li><a href="#strength">Strength Types</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#help">Help Center</a></li>
+                        <li><a href="#feedback">Feedback</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p class="newsletter-text">Get weekly spirit animal quiz insights and personality growth tips</p>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" class="newsletter-input">
+                        <button type="submit" class="newsletter-btn">Subscribe ✨</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <p>&copy; 2024 Spiritanimalquizonline.com. All rights reserved.</p>
+                    <div class="legal-links">
+                        <a href="#privacy" onclick="showPrivacyPolicy()">Privacy Policy</a>
+                        <a href="#terms" onclick="showTermsOfService()">Terms of Service</a>
+                        <a href="#cookies" onclick="showCookiePolicy()">Cookie Policy</a>
+                        <a href="#disclaimer" onclick="showDisclaimer()">Disclaimer</a>
+                    </div>
+                </div>
+                <div class="footer-credits">
+                    <p>The #1 spirit animal quiz online - Made with 💜 for seekers worldwide</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Legal Policy Modals -->
+    <div id="policy-modal" class="policy-modal">
+        <div class="policy-modal-content">
+            <div class="policy-modal-header">
+                <h2 id="policy-title">Policy</h2>
+                <button class="policy-close" onclick="closePolicyModal()">&times;</button>
+            </div>
+            <div class="policy-modal-body" id="policy-content">
+                <!-- Policy content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
