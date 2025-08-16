@@ -137,6 +137,7 @@ body {
     display: none;
     min-height: 100vh;
     padding-top: 70px;
+    background: var(--gradient-mystical);
 }
 
 .page.active {
@@ -2570,7 +2571,7 @@ body {
 }
 
 .faq-section h3 {
-    color: var(--primary);
+    color: var(--white);
     font-size: 2rem;
     text-align: center;
     margin-bottom: var(--space-xl);
@@ -2585,16 +2586,17 @@ body {
 }
 
 .faq-item {
-    background: var(--white);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: var(--radius-md);
-    box-shadow: var(--shadow-sm);
     overflow: hidden;
 }
 
 .faq-question {
     padding: var(--space-lg);
     font-weight: 600;
-    color: var(--primary);
+    color: var(--white);
     cursor: pointer;
     border: none;
     background: none;
@@ -2617,7 +2619,7 @@ body {
 
 .faq-answer {
     padding: 0 var(--space-lg) var(--space-lg);
-    color: var(--gray);
+    color: rgba(255, 255, 255, 0.9);
     line-height: 1.6;
     max-height: 0;
     overflow: hidden;
