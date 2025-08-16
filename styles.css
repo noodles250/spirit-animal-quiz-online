@@ -1827,3 +1827,361 @@ body {
         font-size: 1.6rem;
     }
 }
+
+/* Spirit Animal Detail Pages */
+.breadcrumb {
+    background: var(--white);
+    padding: var(--space-md) 0;
+    border-bottom: 1px solid var(--gray-light);
+    margin-top: 64px;
+}
+
+.breadcrumb-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    gap: var(--space-xs);
+}
+
+.breadcrumb-list li::after {
+    content: '>';
+    margin-left: var(--space-xs);
+    color: var(--gray);
+}
+
+.breadcrumb-list li:last-child::after {
+    display: none;
+}
+
+.breadcrumb-list a {
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.breadcrumb-list .current {
+    color: var(--gray);
+    font-size: 0.9rem;
+}
+
+.spirit-animal-page {
+    background: var(--light);
+    min-height: 100vh;
+    padding: var(--space-2xl) 0;
+}
+
+.animal-hero {
+    text-align: center;
+    margin-bottom: var(--space-3xl);
+    background: var(--white);
+    padding: var(--space-3xl);
+    border-radius: var(--radius-xl);
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.animal-icon {
+    font-size: 5rem;
+    margin-bottom: var(--space-lg);
+}
+
+.animal-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: var(--space-sm);
+}
+
+.animal-tagline {
+    font-size: 1.3rem;
+    font-style: italic;
+    color: var(--gray);
+    margin-bottom: var(--space-lg);
+}
+
+.animal-category {
+    display: inline-block;
+    background: var(--gradient-primary);
+    color: var(--white);
+    padding: var(--space-sm) var(--space-lg);
+    border-radius: var(--radius-xl);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.animal-overview {
+    background: var(--white);
+    padding: var(--space-3xl);
+    border-radius: var(--radius-xl);
+    margin-bottom: var(--space-2xl);
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+}
+
+.animal-overview h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: var(--space-lg);
+}
+
+.overview-text {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--gray);
+    margin-bottom: var(--space-2xl);
+}
+
+.key-traits h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: var(--space-md);
+}
+
+.traits-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+}
+
+.trait-tag {
+    background: var(--light);
+    border: 1px solid var(--gray-light);
+    color: var(--dark);
+    padding: var(--space-xs) var(--space-md);
+    border-radius: var(--radius-xl);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.animal-content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-xl);
+    margin-bottom: var(--space-3xl);
+}
+
+.content-card {
+    background: var(--white);
+    padding: var(--space-2xl);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+}
+
+.content-card h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: var(--space-lg);
+}
+
+.trait-list {
+    list-style: none;
+    padding: 0;
+}
+
+.trait-list li {
+    padding: var(--space-sm) 0;
+    border-bottom: 1px solid var(--gray-light);
+    position: relative;
+    padding-left: var(--space-md);
+    color: var(--gray);
+    line-height: 1.6;
+}
+
+.trait-list li:last-child {
+    border-bottom: none;
+}
+
+.trait-list li::before {
+    content: '✨';
+    position: absolute;
+    left: 0;
+    top: var(--space-sm);
+}
+
+.spiritual-section,
+.compatibility-section {
+    background: var(--white);
+    padding: var(--space-3xl);
+    border-radius: var(--radius-xl);
+    margin-bottom: var(--space-2xl);
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+}
+
+.spiritual-section h2,
+.compatibility-section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: var(--space-lg);
+    text-align: center;
+}
+
+.spiritual-content p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--gray);
+    margin-bottom: var(--space-xl);
+    text-align: center;
+}
+
+.spiritual-aspects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-xl);
+}
+
+.aspect {
+    text-align: center;
+    padding: var(--space-lg);
+    background: var(--light);
+    border-radius: var(--radius-md);
+}
+
+.aspect h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: var(--space-md);
+}
+
+.aspect p {
+    color: var(--gray);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.compatible-animals {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-lg);
+}
+
+.compatible-animal {
+    text-align: center;
+    padding: var(--space-lg);
+    background: var(--light);
+    border-radius: var(--radius-md);
+    transition: var(--transition-normal);
+}
+
+.compatible-animal:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px 0 rgba(0, 0, 0, 0.1);
+}
+
+.compatible-animal .animal-emoji {
+    font-size: 2.5rem;
+    margin-bottom: var(--space-sm);
+}
+
+.compatible-animal .animal-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: var(--space-xs);
+}
+
+.compatible-animal p {
+    font-size: 0.9rem;
+    color: var(--gray);
+    margin: 0;
+}
+
+.cta-section {
+    background: var(--gradient-primary);
+    color: var(--white);
+    padding: var(--space-3xl);
+    border-radius: var(--radius-xl);
+    text-align: center;
+    margin-bottom: var(--space-2xl);
+}
+
+.cta-section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: var(--space-md);
+}
+
+.cta-section p {
+    font-size: 1.1rem;
+    margin-bottom: var(--space-xl);
+    opacity: 0.9;
+}
+
+.related-section {
+    background: var(--white);
+    padding: var(--space-3xl);
+    border-radius: var(--radius-xl);
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+}
+
+.related-section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: var(--space-xl);
+    text-align: center;
+}
+
+.related-animals {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-lg);
+}
+
+.related-card {
+    background: var(--light);
+    padding: var(--space-xl);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition-normal);
+    text-align: center;
+}
+
+.related-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px 0 rgba(0, 0, 0, 0.15);
+}
+
+.related-emoji {
+    font-size: 2.5rem;
+    margin-bottom: var(--space-md);
+}
+
+.related-card h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: var(--space-sm);
+}
+
+.related-card p {
+    color: var(--gray);
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Responsive for Spirit Animal Pages */
+@media (max-width: 768px) {
+    .animal-content-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .spiritual-aspects {
+        grid-template-columns: 1fr;
+    }
+    
+    .compatible-animals {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .related-animals {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+
+# Important pages
+Allow: /spirit-animals/
+Allow: /results/
+Allow: /blog/
+
+# Block admin and temp files
+Disallow: /admin/
+Disallow: /*.tmp
+Disallow: /*.log
+
+# Sitemap location
+Sitemap: https://spiritanimalquizonline.com/sitemap.xml
+
+# Crawl delay (optional)
+Crawl-delay: 1
