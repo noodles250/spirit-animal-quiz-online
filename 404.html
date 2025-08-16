@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found - Spirit Animal Quiz Online</title>
+    <meta name="description" content="Oops! The page you're looking for cannot be found. Navigate back to discover your spirit animal with our comprehensive quiz.">
+    <meta name="robots" content="noindex, nofollow">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        .error-page {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--gradient-mystical);
+            color: var(--white);
+            text-align: center;
+            padding: var(--space-lg);
+        }
+        
+        .error-content {
+            max-width: 600px;
+        }
+        
+        .error-emoji {
+            font-size: 8rem;
+            margin-bottom: var(--space-lg);
+            display: block;
+        }
+        
+        .error-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: var(--space-md);
+        }
+        
+        .error-message {
+            font-size: 1.25rem;
+            margin-bottom: var(--space-xl);
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+        
+        .error-actions {
+            display: flex;
+            gap: var(--space-md);
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .error-button {
+            display: inline-block;
+            padding: var(--space-md) var(--space-xl);
+            background: rgba(255, 255, 255, 0.2);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            transition: var(--transition-normal);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .error-button:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        .error-button.primary {
+            background: var(--white);
+            color: var(--primary);
+            border-color: var(--white);
+        }
+        
+        .error-button.primary:hover {
+            background: var(--light);
+        }
+        
+        .suggestions {
+            margin-top: var(--space-xl);
+            padding-top: var(--space-xl);
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .suggestions h3 {
+            font-size: 1.5rem;
+            margin-bottom: var(--space-lg);
+        }
+        
+        .suggestion-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-md);
+        }
+        
+        .suggestion-link {
+            background: rgba(255, 255, 255, 0.1);
+            padding: var(--space-md);
+            border-radius: var(--radius-md);
+            text-decoration: none;
+            color: var(--white);
+            transition: var(--transition-normal);
+        }
+        
+        .suggestion-link:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        .suggestion-emoji {
+            font-size: 2rem;
+            margin-bottom: var(--space-xs);
+            display: block;
+        }
+        
+        @media (max-width: 768px) {
+            .error-emoji {
+                font-size: 6rem;
+            }
+            
+            .error-title {
+                font-size: 2rem;
+            }
+            
+            .error-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .suggestion-links {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="error-page">
+        <div class="error-content">
+            <span class="error-emoji">🦌</span>
+            <h1 class="error-title">404 - Page Not Found</h1>
+            <p class="error-message">
+                Oops! It seems like this spirit animal has wandered off the path. 
+                The page you're looking for doesn't exist, but don't worry - 
+                your perfect spirit guide is still waiting to be discovered!
+            </p>
+            
+            <div class="error-actions">
+                <a href="index.html" class="error-button primary">Take Spirit Animal Quiz</a>
+                <a href="spirit-animals.html" class="error-button">Browse All Animals</a>
+            </div>
+            
+            <div class="suggestions">
+                <h3>Popular Spirit Animals</h3>
+                <div class="suggestion-links">
+                    <a href="bear.html" class="suggestion-link">
+                        <span class="suggestion-emoji">🐻</span>
+                        <strong>Bear</strong><br>
+                        Strength & Protection
+                    </a>
+                    <a href="wolf.html" class="suggestion-link">
+                        <span class="suggestion-emoji">🐺</span>
+                        <strong>Wolf</strong><br>
+                        Loyalty & Teamwork
+                    </a>
+                    <a href="eagle.html" class="suggestion-link">
+                        <span class="suggestion-emoji">🦅</span>
+                        <strong>Eagle</strong><br>
+                        Vision & Leadership
+                    </a>
+                    <a href="butterfly.html" class="suggestion-link">
+                        <span class="suggestion-emoji">🦋</span>
+                        <strong>Butterfly</strong><br>
+                        Transformation & Beauty
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

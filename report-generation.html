@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Personalized Spirit Animal Report - Spirit Animal Quiz</title>
+    <meta name="description" content="Get your complete spirit animal personality report with detailed insights, career guidance, and spiritual practices.">
+    <meta name="robots" content="noindex, nofollow">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-icon">🦌</span>
+                <span class="logo-text">Spirit Animal Quiz Online</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="report-generation-page">
+        <div class="container">
+            <!-- Hero Section -->
+            <section class="hero-section">
+                <div class="hero-content">
+                    <div class="spirit-result">
+                        <div class="result-emoji" id="spiritEmoji">🐺</div>
+                        <h1 class="hero-title">Your <span id="spiritName">Wolf</span> Spirit Animal Report</h1>
+                        <p class="hero-subtitle">Unlock the full power of your spiritual guide with our comprehensive 15-page personality analysis</p>
+                    </div>
+                    
+                    <div class="generation-status">
+                        <div class="status-indicator">
+                            <div class="spinner"></div>
+                            <span class="status-text">Generating your personalized report...</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progressFill"></div>
+                        </div>
+                        <p class="progress-text">This may take a few moments as we analyze your unique spiritual profile</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Offer Section -->
+            <section class="offer-section">
+                <div class="offer-container">
+                    <div class="urgency-banner">
+                        <span class="urgency-icon">⏰</span>
+                        <span class="urgency-text">Limited Time Offer - Expires in <span id="countdown">14:59</span></span>
+                    </div>
+                    
+                    <div class="offer-content">
+                        <div class="offer-header">
+                            <h2>Get Your Complete Spirit Animal Guide</h2>
+                            <p class="offer-subtitle">Everything you need to understand and connect with your spiritual essence</p>
+                        </div>
+                        
+                        <!-- Pricing Cards -->
+                        <div class="pricing-cards">
+                            <!-- Free Preview Card -->
+                            <div class="pricing-card basic-card">
+                                <div class="card-header">
+                                    <h3>Basic Report</h3>
+                                    <div class="price">
+                                        <span class="currency">$</span>
+                                        <span class="amount">0</span>
+                                        <span class="period">Free</span>
+                                    </div>
+                                </div>
+                                <div class="card-features">
+                                    <div class="feature included">
+                                        <span class="feature-icon">✅</span>
+                                        <span>Basic spirit animal overview</span>
+                                    </div>
+                                    <div class="feature included">
+                                        <span class="feature-icon">✅</span>
+                                        <span>3 key personality traits</span>
+                                    </div>
+                                    <div class="feature not-included">
+                                        <span class="feature-icon">❌</span>
+                                        <span>Detailed personality analysis</span>
+                                    </div>
+                                    <div class="feature not-included">
+                                        <span class="feature-icon">❌</span>
+                                        <span>Career & relationship guidance</span>
+                                    </div>
+                                    <div class="feature not-included">
+                                        <span class="feature-icon">❌</span>
+                                        <span>Spiritual practices & rituals</span>
+                                    </div>
+                                    <div class="feature not-included">
+                                        <span class="feature-icon">❌</span>
+                                        <span>Compatibility analysis</span>
+                                    </div>
+                                </div>
+                                <button class="card-button basic-button" onclick="getBasicReport()">
+                                    Get Basic Report
+                                </button>
+                            </div>
+                            
+                            <!-- Premium Card -->
+                            <div class="pricing-card premium-card recommended">
+                                <div class="recommended-badge">Most Popular</div>
+                                <div class="card-header">
+                                    <h3>Complete Guide</h3>
+                                    <div class="price">
+                                        <span class="original-price">$47</span>
+                                        <span class="currency">$</span>
+                                        <span class="amount">19</span>
+                                        <span class="period">One-time</span>
+                                    </div>
+                                    <div class="savings">Save $28 - 60% OFF</div>
+                                </div>
+                                <div class="card-features">
+                                    <div class="feature included">
+                                        <span class="feature-icon">✅</span>
+                                        <span>Complete 15-page personality report</span>
+                                    </div>
+                                    <div class="feature included">
+                                        <span class="feature-icon">✅</span>
+                                        <span>Detailed behavioral analysis</span>
+                                    </div>
+                                    <div class="feature included">
+                                        <span class="feature-icon">✅</span>
+                                        <span>Career & life path guidance</span>
+                                    </div>
+                                    <div class="feature included">
+                                        <span class="feature-icon">✅</span>
+                                        <span>Relationship compatibility guide</span>
+                                    </div>
+                                    <div class="feature included">
+                                        <span class="feature-icon">✅</span>
+                                        <span>Daily spiritual practices</span>
+                                    </div>
+                                    <div class="feature included">
+                                        <span class="feature-icon">✅</span>
+                                        <span>Meditation & ritual techniques</span>
+                                    </div>
+                                    <div class="feature included">
+                                        <span class="feature-icon">✅</span>
+                                        <span>Personal growth roadmap</span>
+                                    </div>
+                                    <div class="feature included">
+                                        <span class="feature-icon">✅</span>
+                                        <span>Lifetime access & updates</span>
+                                    </div>
+                                </div>
+                                <button class="card-button premium-button" onclick="getPremiumReport()">
+                                    Get Complete Guide - $19
+                                </button>
+                                <div class="guarantee">
+                                    <span class="guarantee-icon">🛡️</span>
+                                    <span>60-day money-back guarantee</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- What's Included Section -->
+                        <div class="whats-included">
+                            <h3>What's Inside Your Complete Guide</h3>
+                            <div class="included-items">
+                                <div class="included-item">
+                                    <div class="item-icon">📊</div>
+                                    <div class="item-content">
+                                        <h4>Deep Personality Analysis</h4>
+                                        <p>Comprehensive breakdown of your behavioral patterns, motivations, and psychological profile based on your spirit animal.</p>
+                                    </div>
+                                </div>
+                                <div class="included-item">
+                                    <div class="item-icon">💼</div>
+                                    <div class="item-content">
+                                        <h4>Career & Life Guidance</h4>
+                                        <p>Discover ideal career paths, work environments, and life directions that align with your spiritual essence.</p>
+                                    </div>
+                                </div>
+                                <div class="included-item">
+                                    <div class="item-icon">❤️</div>
+                                    <div class="item-content">
+                                        <h4>Relationship Compatibility</h4>
+                                        <p>Understand your relationship patterns, compatibility with other spirit animals, and how to build deeper connections.</p>
+                                    </div>
+                                </div>
+                                <div class="included-item">
+                                    <div class="item-icon">🧘</div>
+                                    <div class="item-content">
+                                        <h4>Spiritual Practices</h4>
+                                        <p>Daily rituals, meditation techniques, and spiritual practices to strengthen your connection with your animal guide.</p>
+                                    </div>
+                                </div>
+                                <div class="included-item">
+                                    <div class="item-icon">🌟</div>
+                                    <div class="item-content">
+                                        <h4>Personal Growth Roadmap</h4>
+                                        <p>Step-by-step guidance for personal development, overcoming challenges, and reaching your full potential.</p>
+                                    </div>
+                                </div>
+                                <div class="included-item">
+                                    <div class="item-icon">🔮</div>
+                                    <div class="item-content">
+                                        <h4>Ancient Wisdom & Modern Insights</h4>
+                                        <p>Blend of traditional shamanic knowledge and contemporary psychological insights for holistic understanding.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Testimonials -->
+            <section class="testimonials-section">
+                <h3>What Our Community Says</h3>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"This report was incredibly insightful! The career guidance section helped me realize I was in the wrong field. I'm now pursuing my passion as a nature photographer, which perfectly aligns with my Eagle spirit."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">👩‍💼</div>
+                            <div class="author-info">
+                                <div class="author-name">Sarah Johnson</div>
+                                <div class="author-title">Professional Photographer</div>
+                            </div>
+                        </div>
+                        <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"The relationship section was a game-changer for my marriage. Understanding my Wolf spirit and my partner's Bear spirit helped us communicate better and appreciate our differences."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">👨‍💻</div>
+                            <div class="author-info">
+                                <div class="author-name">Michael Rodriguez</div>
+                                <div class="author-title">Software Engineer</div>
+                            </div>
+                        </div>
+                        <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"The spiritual practices section has become part of my daily routine. The meditation techniques specific to my Butterfly spirit have brought so much peace and clarity to my life."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">👩‍🎨</div>
+                            <div class="author-info">
+                                <div class="author-name">Emma Thompson</div>
+                                <div class="author-title">Artist & Healer</div>
+                            </div>
+                        </div>
+                        <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="faq-section">
+                <h3>Frequently Asked Questions</h3>
+                <div class="faq-items">
+                    <div class="faq-item">
+                        <div class="faq-question">How is this different from the free result?</div>
+                        <div class="faq-answer">The complete guide includes 15 pages of in-depth analysis, career guidance, relationship compatibility, spiritual practices, and a personal growth roadmap - far beyond the basic overview.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">Is this a one-time payment?</div>
+                        <div class="faq-answer">Yes! This is a one-time payment of $19 with lifetime access. No subscriptions or recurring charges.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">What if I'm not satisfied?</div>
+                        <div class="faq-answer">We offer a 60-day money-back guarantee. If you're not completely satisfied with your report, we'll refund your payment in full.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">How quickly will I receive my report?</div>
+                        <div class="faq-answer">Your complete report will be generated immediately after payment and sent to your email address within minutes.</div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script>
+        // Get user data from URL parameters and localStorage
+        function initializePage() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const spiritAnimal = urlParams.get('animal') || localStorage.getItem('spiritAnimal') || 'Wolf';
+            const userEmail = urlParams.get('email') || localStorage.getItem('userEmail');
+            
+            // Update spirit animal display
+            document.getElementById('spiritName').textContent = spiritAnimal;
+            
+            // Set emoji based on spirit animal
+            const animalEmojis = {
+                'Wolf': '🐺', 'Bear': '🐻', 'Eagle': '🦅', 'Butterfly': '🦋',
+                'Lion': '🦁', 'Owl': '🦉', 'Fox': '🦊', 'Elephant': '🐘',
+                'Tiger': '🐅', 'Horse': '🐴', 'Dolphin': '🐬', 'Rabbit': '🐰',
+                'Snake': '🐍', 'Turtle': '🐢', 'Rhino': '🦏', 'Panda': '🐼', 'Hawk': '🦅'
+            };
+            
+            document.getElementById('spiritEmoji').textContent = animalEmojis[spiritAnimal] || '🐺';
+            
+            // Simulate report generation progress
+            simulateReportGeneration();
+            
+            // Start countdown timer
+            startCountdown();
+        }
+        
+        function simulateReportGeneration() {
+            const progressFill = document.getElementById('progressFill');
+            const statusText = document.querySelector('.status-text');
+            let progress = 0;
+            
+            const messages = [
+                'Analyzing your quiz responses...',
+                'Consulting ancient wisdom texts...',
+                'Mapping personality traits...',
+                'Generating career insights...',
+                'Preparing spiritual guidance...',
+                'Finalizing your report...'
+            ];
+            
+            const interval = setInterval(() => {
+                progress += Math.random() * 15 + 5; // Random progress increment
+                
+                if (progress >= 100) {
+                    progress = 100;
+                    statusText.textContent = 'Report ready! Choose your option below.';
+                    clearInterval(interval);
+                } else {
+                    const messageIndex = Math.floor((progress / 100) * messages.length);
+                    statusText.textContent = messages[Math.min(messageIndex, messages.length - 1)];
+                }
+                
+                progressFill.style.width = progress + '%';
+            }, 500);
+        }
+        
+        function startCountdown() {
+            let timeLeft = 15 * 60; // 15 minutes in seconds
+            const countdownElement = document.getElementById('countdown');
+            
+            const timer = setInterval(() => {
+                const minutes = Math.floor(timeLeft / 60);
+                const seconds = timeLeft % 60;
+                
+                countdownElement.textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+                
+                if (timeLeft <= 0) {
+                    clearInterval(timer);
+                    countdownElement.textContent = 'EXPIRED';
+                }
+                
+                timeLeft--;
+            }, 1000);
+        }
+        
+        function getBasicReport() {
+            // Redirect to a basic report page or generate simple report
+            const spiritAnimal = document.getElementById('spiritName').textContent;
+            window.location.href = `${spiritAnimal.toLowerCase()}.html`;
+        }
+        
+        function getPremiumReport() {
+            // TODO: Integrate with payment processor
+            // For now, show a placeholder
+            alert('Payment integration will be implemented here. This would redirect to payment processor (Stripe, PayPal, etc.)');
+            
+            // Placeholder for payment flow:
+            // 1. Redirect to payment processor
+            // 2. On successful payment, generate and send report
+            // 3. Redirect to thank you page
+        }
+        
+        // FAQ functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    const isActive = item.classList.contains('active');
+                    
+                    // Close all other items
+                    faqItems.forEach(otherItem => {
+                        otherItem.classList.remove('active');
+                    });
+                    
+                    // Toggle current item
+                    if (!isActive) {
+                        item.classList.add('active');
+                    }
+                });
+            });
+        });
+        
+        // Initialize page when DOM is loaded
+        document.addEventListener('DOMContentLoaded', initializePage);
+    </script>
+</body>
+</html>
