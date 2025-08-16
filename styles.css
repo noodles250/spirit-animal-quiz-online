@@ -950,11 +950,13 @@ body {
     text-decoration: none;
     transition: var(--transition-fast);
     font-size: 0.9rem;
+    cursor: pointer;
 }
 
 .footer-links a:hover {
     color: var(--white);
     padding-left: 5px;
+    text-decoration: underline;
 }
 
 .newsletter-text {
