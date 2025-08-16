@@ -1823,3 +1823,12 @@ window.SpiritAnimalQuiz = {
     showDisclaimer,
     closePolicyModal
 };
+
+// Make key functions globally available for HTML onclick handlers
+window.showPage = showPage;
+window.startQuiz = startQuiz;
+window.showPrivacyPolicy = showPrivacyPolicy;
+window.showTermsOfService = showTermsOfService;
+window.showCookiePolicy = showCookiePolicy;
+window.showDisclaimer = showDisclaimer;
+window.closePolicyModal = closePolicyModal;
