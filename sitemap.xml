@@ -26,6 +26,14 @@
         <priority>0.9</priority>
     </url>
     
+    <!-- All Spirit Animals Directory -->
+    <url>
+        <loc>https://spiritanimalquizonline.com/all-spirit-animals</loc>
+        <lastmod>2024-01-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
     <!-- Spirit Animals Category Pages -->
     <url>
         <loc>https://spiritanimalquizonline.com/spirit-animals/eagle</loc>
