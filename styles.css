@@ -874,6 +874,8 @@ body {
     background: var(--gradient-dark);
     color: var(--white);
     margin-top: auto;
+    position: relative;
+    z-index: 5;
 }
 
 .footer-content {
@@ -939,24 +941,36 @@ body {
 .footer-links {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .footer-links li {
     margin-bottom: var(--space-xs);
+    position: relative;
+    z-index: 10;
 }
 
 .footer-links a {
-    color: rgba(255, 255, 255, 0.9);
-    text-decoration: none;
+    color: rgba(255, 255, 255, 0.9) !important;
+    text-decoration: none !important;
     transition: var(--transition-fast);
     font-size: 0.9rem;
-    cursor: pointer;
+    cursor: pointer !important;
+    display: inline-block;
+    position: relative;
+    z-index: 10;
 }
 
 .footer-links a:hover {
-    color: var(--white);
+    color: var(--white) !important;
     padding-left: 5px;
-    text-decoration: underline;
+    text-decoration: underline !important;
+    transform: translateX(2px);
+}
+
+.footer-links a:focus {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
 }
 
 .newsletter-text {
