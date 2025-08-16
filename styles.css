@@ -128,35 +128,6 @@ body {
     border-radius: 1px;
 }
 
-/* Language Switcher */
-.language-switcher {
-    display: flex;
-    gap: var(--space-xs);
-    margin-left: var(--space-md);
-}
-
-.lang-btn {
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(139, 92, 246, 0.3);
-    color: var(--gray);
-    padding: var(--space-xs) var(--space-sm);
-    border-radius: var(--radius-sm);
-    font-size: 0.8rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: var(--transition-fast);
-}
-
-.lang-btn:hover,
-.lang-btn.active {
-    background: var(--primary);
-    color: var(--white);
-    border-color: var(--primary);
-}
-
-.lang-btn.active {
-    box-shadow: var(--shadow-sm);
-}
 
 /* Page System */
 .page {
@@ -1166,13 +1137,6 @@ body {
 @media (max-width: 768px) {
     .nav-links {
         display: none;
-    }
-    
-    .language-switcher {
-        position: fixed;
-        top: 80px;
-        right: var(--space-lg);
-        z-index: 999;
     }
     
     .hero-stats {

@@ -8,241 +8,11 @@ const AppState = {
     answers: [],
     totalQuestions: 12,
     quizStarted: false,
-    result: null,
-    language: 'en', // Default language
-    userCountry: null
+    result: null
 };
 
-// Internationalization (i18n) 🌍
-const translations = {
-    en: {
-        // Navigation
-        home: 'Home',
-        about: 'About',
-        animals: 'Animals',
-        
-        // Hero Section
-        heroTitle: 'Take the Best',
-        heroTitleSpan: 'Spirit Animal Quiz Online',
-        heroSubtitle: 'Free spirit animal quiz with instant results! Discover which spirit animal matches your personality through our comprehensive online test',
-        
-        // Stats
-        statTakers: 'Spirit Animal Quiz Takers',
-        statAnimals: 'Spirit Animals Available',
-        statFree: 'Free Online Quiz',
-        
-        // Buttons
-        startQuiz: 'Take Spirit Animal Quiz Now',
-        shareResult: 'Share My Result',
-        takeAgain: 'Take Quiz Again',
-        
-        // Quiz
-        progressText: 'Question {current} of {total}',
-        
-        // Results
-        yourSpiritAnimal: 'Your Spirit Animal',
-        coreTraits: 'Your Core Traits',
-        strengths: 'Strengths',
-        growthAreas: 'Growth Areas',
-        idealCareers: 'Ideal Careers',
-        compatibleAnimals: 'Compatible Animals',
-        spiritualGuidance: 'Spiritual Guidance',
-        growthFocus: 'Growth Focus',
-        dailyAffirmation: 'Daily Affirmation',
-        
-        // Categories
-        leadership: 'Leadership',
-        wisdom: 'Wisdom',
-        freedom: 'Freedom',
-        strength: 'Strength'
-    },
-    
-    zh: {
-        // Navigation
-        home: '首页',
-        about: '关于',
-        animals: '动物',
-        
-        // Hero Section
-        heroTitle: '最佳',
-        heroTitleSpan: '在线精神动物测试',
-        heroSubtitle: '免费精神动物测试，立即获得结果！通过我们全面的在线测试，发现哪种精神动物与你的性格最匹配',
-        
-        // Stats
-        statTakers: '精神动物测试参与者',
-        statAnimals: '可测精神动物',
-        statFree: '免费在线测试',
-        
-        // Buttons
-        startQuiz: '开始精神动物测试',
-        shareResult: '分享我的结果',
-        takeAgain: '重新测试',
-        
-        // Quiz
-        progressText: '第 {current} 题，共 {total} 题',
-        
-        // Results
-        yourSpiritAnimal: '你的精神动物',
-        coreTraits: '你的核心特质',
-        strengths: '优势',
-        growthAreas: '成长领域',
-        idealCareers: '理想职业',
-        compatibleAnimals: '兼容动物',
-        spiritualGuidance: '精神指导',
-        growthFocus: '成长焦点',
-        dailyAffirmation: '每日确言',
-        
-        // Categories
-        leadership: '领导力',
-        wisdom: '智慧',
-        freedom: '自由',
-        strength: '力量'
-    }
-};
 
-// Utility function to get translated text
-function t(key, params = {}) {
-    const lang = AppState.language;
-    let text = translations[lang]?.[key] || translations.en[key] || key;
-    
-    // Replace parameters like {current} and {total}
-    Object.keys(params).forEach(param => {
-        text = text.replace(`{${param}}`, params[param]);
-    });
-    
-    return text;
-}
 
-// IP-based language detection
-async function detectUserLocation() {
-    try {
-        // Using ipapi.co for free IP geolocation
-        const response = await fetch('https://ipapi.co/json/');
-        const data = await response.json();
-        
-        AppState.userCountry = data.country_code;
-        
-        // Set language based on country
-        const chineseCountries = ['CN', 'TW', 'HK', 'MO', 'SG'];
-        if (chineseCountries.includes(data.country_code)) {
-            AppState.language = 'zh';
-            document.documentElement.lang = 'zh';
-        } else {
-            AppState.language = 'en';
-            document.documentElement.lang = 'en';
-        }
-        
-        // Update UI with detected language
-        updateLanguage();
-        
-        console.log(`🌍 Detected location: ${data.country_name} (${data.country_code})`);
-        console.log(`🗣️ Language set to: ${AppState.language}`);
-        
-    } catch (error) {
-        console.log('Could not detect location, using default language (en)');
-        AppState.language = 'en';
-        updateLanguage();
-    }
-}
-
-// Update UI text based on current language
-function updateLanguage() {
-    // Update navigation
-    const navLinks = document.querySelectorAll('.nav-link');
-    navLinks.forEach(link => {
-        const href = link.getAttribute('href');
-        if (href === '#home') link.textContent = t('home');
-        if (href === '#about') link.textContent = t('about');
-        if (href === '#animals') link.textContent = t('animals');
-    });
-    
-    // Update hero section
-    const heroTitle = document.querySelector('.hero-title');
-    if (heroTitle) {
-        heroTitle.innerHTML = `
-            ${t('heroTitle')}
-            <span class="gradient-text">${t('heroTitleSpan')}</span>
-        `;
-    }
-    
-    const heroSubtitle = document.querySelector('.hero-subtitle');
-    if (heroSubtitle) {
-        heroSubtitle.textContent = t('heroSubtitle');
-    }
-    
-    // Update stats
-    const statLabels = document.querySelectorAll('.stat-label');
-    if (statLabels.length >= 3) {
-        statLabels[0].textContent = t('statTakers');
-        statLabels[1].textContent = t('statAnimals');
-        statLabels[2].textContent = t('statFree');
-    }
-    
-    // Update buttons
-    const startBtn1 = document.getElementById('start-quiz-btn');
-    const startBtn2 = document.getElementById('start-quiz-btn-2');
-    if (startBtn1) startBtn1.querySelector('.button-text').textContent = t('startQuiz');
-    if (startBtn2) startBtn2.querySelector('.button-text').textContent = t('startQuiz');
-    
-    // Update progress text if quiz is active
-    updateProgressText();
-    
-    // Update language switcher buttons
-    updateLanguageSwitcher();
-}
-
-function updateProgressText() {
-    const progressText = document.getElementById('progress-text');
-    if (progressText && AppState.quizStarted) {
-        progressText.textContent = t('progressText', {
-            current: AppState.currentQuestion + 1,
-            total: AppState.totalQuestions
-        });
-    }
-}
-
-function updateLanguageSwitcher() {
-    const langBtns = document.querySelectorAll('.lang-btn');
-    langBtns.forEach(btn => {
-        btn.classList.toggle('active', btn.dataset.lang === AppState.language);
-    });
-}
-
-function switchLanguage(lang) {
-    if (lang === AppState.language) return;
-    
-    AppState.language = lang;
-    document.documentElement.lang = lang;
-    
-    // Save language preference
-    localStorage.setItem('preferred_language', lang);
-    
-    updateLanguage();
-    
-    // If quiz is active, refresh current question
-    if (AppState.quizStarted) {
-        showQuestion(AppState.currentQuestion);
-    }
-    
-    console.log(`🗣️ Language switched to: ${lang}`);
-}
-
-function initializeLanguageSwitcher() {
-    const langBtns = document.querySelectorAll('.lang-btn');
-    langBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            switchLanguage(btn.dataset.lang);
-        });
-    });
-    
-    // Check for saved language preference
-    const savedLang = localStorage.getItem('preferred_language');
-    if (savedLang && translations[savedLang]) {
-        AppState.language = savedLang;
-        document.documentElement.lang = savedLang;
-        updateLanguage();
-    }
-}
 
 // Spirit Animals Database 🦌✨
 const SpiritAnimals = {
@@ -927,43 +697,28 @@ const SpiritAnimals = {
     }
 };
 
-// Quiz Questions Data with i18n support
+// Quiz Questions Data
 const QuizQuestions = [
     {
         id: 1,
-        question: {
-            en: "When facing a difficult challenge, what's your first instinct?",
-            zh: "面对困难挑战时，你的第一反应是什么？"
-        },
+        question: "When facing a difficult challenge, what's your first instinct?",
         type: "personality",
         weight: 3,
         options: [
             { 
-                text: {
-                    en: "Analyze the situation carefully before acting",
-                    zh: "在行动前仔细分析情况"
-                }, 
+                text: "Analyze the situation carefully before acting",
                 animals: { owl: 3, elephant: 2, wolf: 2 } 
             },
             { 
-                text: {
-                    en: "Take charge and lead others through it",
-                    zh: "主导局面并带领他人度过难关"
-                }, 
+                text: "Take charge and lead others through it",
                 animals: { eagle: 3, lion: 3, tiger: 2 } 
             },
             { 
-                text: {
-                    en: "Adapt and find creative solutions",
-                    zh: "适应并找到创造性解决方案"
-                }, 
+                text: "Adapt and find creative solutions",
                 animals: { fox: 3, butterfly: 2, dolphin: 2 } 
             },
             { 
-                text: {
-                    en: "Stand strong and protect those around you",
-                    zh: "坚强地保护身边的人"
-                }, 
+                text: "Stand strong and protect those around you",
                 animals: { bear: 3, rhino: 2, elephant: 2 } 
             }
         ]
@@ -1382,16 +1137,10 @@ function showQuestion(questionIndex) {
     // Update progress
     const progress = ((questionIndex + 1) / AppState.totalQuestions) * 100;
     elements.progressFill.style.width = `${progress}%`;
-    elements.progressText.textContent = t('progressText', {
-        current: questionIndex + 1,
-        total: AppState.totalQuestions
-    });
+    elements.progressText.textContent = `Question ${questionIndex + 1} of ${AppState.totalQuestions}`;
     
-    // Update question with multi-language support
-    const questionText = typeof question.question === 'string' 
-        ? question.question 
-        : question.question[AppState.language] || question.question.en;
-    elements.questionTitle.textContent = questionText;
+    // Update question
+    elements.questionTitle.textContent = question.question;
     
     // Clear and populate answers
     elements.answersGrid.innerHTML = '';
@@ -1399,12 +1148,7 @@ function showQuestion(questionIndex) {
     question.options.forEach((option, index) => {
         const answerDiv = document.createElement('div');
         answerDiv.className = 'answer-option';
-        
-        // Support multi-language options
-        const optionText = typeof option.text === 'string' 
-            ? option.text 
-            : option.text[AppState.language] || option.text.en;
-        answerDiv.textContent = optionText;
+        answerDiv.textContent = option.text;
         answerDiv.dataset.optionIndex = index;
         
         answerDiv.addEventListener('click', () => selectAnswer(questionIndex, index));
@@ -1669,13 +1413,6 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('🦌 Spirit Animal Quiz initialized!');
     initializeEventListeners();
     
-    // Initialize language switcher first (check for saved preferences)
-    initializeLanguageSwitcher();
-    
-    // Detect user location and set language (only if no saved preference)
-    if (!localStorage.getItem('preferred_language')) {
-        detectUserLocation();
-    }
     
     // Add some visual flair to the landing page
     setTimeout(() => {
