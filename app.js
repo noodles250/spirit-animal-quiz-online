@@ -8,7 +8,8 @@ const AppState = {
     answers: [],
     totalQuestions: 12,
     quizStarted: false,
-    result: null
+    result: null,
+    selectedGender: null
 };
 
 
@@ -1378,9 +1379,39 @@ function exitQuiz() {
     }
 }
 
+// Gender Selection Functions
+function handleGenderSelection(gender) {
+    AppState.selectedGender = gender;
+    
+    // Update UI to show selection
+    document.querySelectorAll('.gender-option').forEach(option => {
+        option.classList.remove('selected');
+    });
+    
+    const selectedOption = document.querySelector(`[data-gender="${gender}"]`);
+    if (selectedOption) {
+        selectedOption.classList.add('selected');
+    }
+    
+    // Start quiz after a short delay for visual feedback
+    setTimeout(() => {
+        startQuiz();
+    }, 800);
+    
+    console.log(`Gender selected: ${gender}`);
+}
+
 // Event Listeners
 function initializeEventListeners() {
-    // Start quiz buttons
+    // Gender selection
+    document.querySelectorAll('.gender-option').forEach(option => {
+        option.addEventListener('click', () => {
+            const gender = option.dataset.gender;
+            handleGenderSelection(gender);
+        });
+    });
+    
+    // Start quiz buttons (if any remain)
     if (elements.startQuizBtn) {
         elements.startQuizBtn.addEventListener('click', startQuiz);
     }
@@ -1392,17 +1423,6 @@ function initializeEventListeners() {
     if (elements.quizExitBtn) {
         elements.quizExitBtn.addEventListener('click', exitQuiz);
     }
-    
-    // Animal carousel hover effects
-    document.querySelectorAll('.animal-card').forEach(card => {
-        card.addEventListener('mouseenter', () => {
-            card.style.transform = 'translateY(-5px) scale(1.05)';
-        });
-        
-        card.addEventListener('mouseleave', () => {
-            card.style.transform = 'translateY(0) scale(1)';
-        });
-    });
     
     // Initialize navigation
     initializeNavigation();
